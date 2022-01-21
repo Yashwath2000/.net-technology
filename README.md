@@ -30,3 +30,7 @@ namespace exercises<br>
     }
 }
 
+Output
+<br>
+<br>
+![image](https://user-images.githubusercontent.com/98145017/150476776-8e0ac215-e69c-46c4-a9f4-00c95d44e5f1.png)
