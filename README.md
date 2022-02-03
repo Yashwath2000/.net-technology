@@ -89,8 +89,8 @@ output<br>
 using System;<br>
 
 namespace prog4<br>
-{
-    class GrayCode
+{<br>
+    class GrayCode<br>
     {
         static int getGray(int n)
         {
