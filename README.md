@@ -107,3 +107,53 @@ namespace prog4
         }
     }
 }
+<br>
+5.C3 PROGRAM TO CALCULATE VOLUME OF 2 BOXES AND FIND THE RESULTANT VOLUME AFTER ADDITION OF 2 BOXES BY IMPLEMENTING OPERATOR OVERLOADING
+using System;
+namespace prog5
+{
+    class Box
+    {
+        float width;
+        float height;
+        float length;
+
+        public float Volume
+        {
+            get
+            {
+                return width * height * length;
+            }
+        }
+                public Box(float width, float height, float length)
+                {
+                    this.width=width;
+                    this.height=height;
+                    this.length=length;
+                }
+                public static float operator +(Box box1, Box box2)
+                {
+                    return box1.Volume + box2.Volume;
+                }
+                public override String ToString()
+                {
+                    return "box with width" + width + ",height" + height + "and height" + length;
+                }
+    }
+        class OperatorOverloading
+        {
+            public static void Main()
+            {
+                Box box1 = new Box(10, 20, 30);
+                Box box2 = new Box(25, 32, 15);
+
+                Console.WriteLine("volume of {0} is :{1}", box1, box1.Volume);
+                Console.WriteLine("volume of {0} is :{1}", box2, box2.Volume);
+                Console.WriteLine("volume after adding boxes:{0}", box1 + box2);
+            }
+        }
+}
+  
+OUTPUT:<BR>
+![image](https://user-images.githubusercontent.com/98145017/152291139-ae19e634-7049-45a1-b415-600832ada005.png)
+
