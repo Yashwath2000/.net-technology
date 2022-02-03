@@ -91,22 +91,22 @@ using System;<br>
 namespace prog4<br>
 {<br>
     class GrayCode<br>
-    {
-        static int getGray(int n)
-        {
-            return n^(n>>1);
-        }
-        static void Main(string[] args)
-        {
-            int InputNum, GrayNum;
-            Console.WriteLine("\n enter the decimal number:");
-            InputNum = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\nBinary equivalent of {0}:{1}", InputNum, Convert.ToString(InputNum, 2));
-            GrayNum = getGray(InputNum);
-            Console.WriteLine("\ngray code equivalent of {0}:{1}", InputNum, Convert.ToString(GrayNum, 2));
-        }
-    }
-}
+    {<br>
+        static int getGray(int n)<br>
+        {<br>
+            return n^(n>>1);<br>
+        }<br>
+        static void Main(string[] args)<br>
+        {<br>
+            int InputNum, GrayNum;<br>
+            Console.WriteLine("\n enter the decimal number:");<br>
+            InputNum = Convert.ToInt32(Console.ReadLine());<br>
+            Console.WriteLine("\nBinary equivalent of {0}:{1}", InputNum, Convert.ToString(InputNum, 2));<br>
+            GrayNum = getGray(InputNum);<br>
+            Console.WriteLine("\ngray code equivalent of {0}:{1}", InputNum, Convert.ToString(GrayNum, 2));<br>
+        }<br>
+    }<br>
+}<br>
 OUTPUT:<br>
 ![image](https://user-images.githubusercontent.com/98145017/152292190-b8673f16-91be-42c7-8824-1602356c6892.png)
 
