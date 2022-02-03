@@ -82,3 +82,28 @@ output<br>
 <br>
 ![image](https://user-images.githubusercontent.com/98145017/150484299-19828100-bba0-4bc2-87dd-8debfdd6f2d9.png)
 ![image](https://user-images.githubusercontent.com/98145017/150485232-527fed68-5ec5-47a4-b1b8-c36deb81e619.png)
+<br>
+<br>
+<br>
+4.C# PROGRAM TO CREATE GRAY CODE
+using System;
+
+namespace prog4
+{
+    class GrayCode
+    {
+        static int getGray(int n)
+        {
+            return n^(n>>1);
+        }
+        static void Main(string[] args)
+        {
+            int InputNum, GrayNum;
+            Console.WriteLine("\n enter the decimal number:");
+            InputNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nBinary equivalent of {0}:{1}", InputNum, Convert.ToString(InputNum, 2));
+            GrayNum = getGray(InputNum);
+            Console.WriteLine("\ngray code equivalent of {0}:{1}", InputNum, Convert.ToString(GrayNum, 2));
+        }
+    }
+}
