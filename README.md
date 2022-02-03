@@ -85,10 +85,10 @@ output<br>
 <br>
 <br>
 <br>
-4.C# PROGRAM TO CREATE GRAY CODE
-using System;
+4.C# PROGRAM TO CREATE GRAY CODE<br>
+using System;<br>
 
-namespace prog4
+namespace prog4<br>
 {
     class GrayCode
     {
@@ -107,6 +107,9 @@ namespace prog4
         }
     }
 }
+OUTPUT:<br>
+![image](https://user-images.githubusercontent.com/98145017/152292190-b8673f16-91be-42c7-8824-1602356c6892.png)
+
 <br>
 <br>
 5.C3 PROGRAM TO CALCULATE VOLUME OF 2 BOXES AND FIND THE RESULTANT VOLUME AFTER ADDITION OF 2 BOXES BY IMPLEMENTING OPERATOR OVERLOADING<br>
