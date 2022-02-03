@@ -141,7 +141,7 @@ namespace prog5<br>
                 }
                 public override String ToString()
                 {
-                    return "box with width" + width + ",height" + height + "and height" + length;
+                    return "box with width " + width + ",height " + height + "and length " + length;
                 }
     }
         class OperatorOverloading
@@ -159,5 +159,6 @@ namespace prog5<br>
 }
   
 OUTPUT:<BR>
-![image](https://user-images.githubusercontent.com/98145017/152291139-ae19e634-7049-45a1-b415-600832ada005.png)
+![image](https://user-images.githubusercontent.com/98145017/152293199-fc67bd7d-a06a-4191-8247-0aab2aa5e188.png)<br>
+
 
