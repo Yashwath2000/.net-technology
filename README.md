@@ -160,46 +160,73 @@ namespace prog5<br>
   
 OUTPUT:<BR>
 ![image](https://user-images.githubusercontent.com/98145017/152293199-fc67bd7d-a06a-4191-8247-0aab2aa5e188.png)<br><br>
-6.C#PROGRAM TO IMPLEMENT
+6.C#PROGRAM TO IMPLEMENT PRINCIPLE OF DELEGATES CONVERTING INPUT STRING TO UPPERCASEFIRST,LAST AND ENTIRE STRING.
+    using System;<br>
+
+namespace program6<br>
+{<br>
+    class Delegates<br>
+    {<br>
+        delegate string UppercaseDelegate(string input);<br>
+        static string UppercaseFirst(string input)<br>
+        {<br>
+            char[] buffer = input.ToCharArray();<br>
+            buffer[0]=char.ToUpper(buffer[0]);<br>
+            return new string(buffer);<br>
+        }<br>
+        static string UppercaseLast(string input)<br>
+        {<br>
+            char[] buffer = input.ToCharArray();<br>
+            buffer[buffer.Length - 1] = char.ToUpper(buffer[buffer.Length - 1]);<br>
+            return new string(buffer);<br>
+        }<br>
+        static string UppercaseAll(string input)<br>
+        {<br>
+            return input.ToUpper();<br>
+        }<br>
+        static void WriteOutput(string input, UppercaseDelegate del)<br>
+        {<br>
+            Console.WriteLine("Input.String:{0}", input);<br>
+            Console.WriteLine("output string:{0}", del(input));<br>
+        }<br>
+        static void Main()<br>
+        {<br>
+            WriteOutput("tom", new UppercaseDelegate(UppercaseFirst));<br>
+            WriteOutput("tom", new UppercaseDelegate(UppercaseLast));<br>
+            WriteOutput("tom", new UppercaseDelegate(UppercaseAll));<br>
+            Console.ReadLine();<br>
+        }<br>
+    }<br>
+}<br>
+ OUTPUT:<br>
+    ![image](https://user-images.githubusercontent.com/98145017/152299602-a4948d0b-1039-48d6-aee9-a71d3a996cff.png)<br>
+    7.register number<br>
     using System;
 
-namespace program6
+namespace register
 {
-    class Delegates
+    class RegisterNum
     {
-        delegate string UppercaseDelegate(string input);
-        static string UppercaseFirst(string input)
+        int regno;
+        static int startNum;
+        static RegisterNum()
         {
-            char[] buffer = input.ToCharArray();
-            buffer[0]=char.ToUpper(buffer[0]);
-            return new string(buffer);
+            startNum = 20210000;
         }
-        static string UppercaseLast(string input)
+        RegisterNum()
         {
-            char[] buffer = input.ToCharArray();
-            buffer[buffer.Length - 1] = char.ToUpper(buffer[buffer.Length - 1]);
-            return new string(buffer);
+            regno = ++startNum;
         }
-        static string UppercaseAll(string input)
+        public static void Main(string[] args)
         {
-            return input.ToUpper();
-        }
-        static void WriteOutput(string input, UppercaseDelegate del)
-        {
-            Console.WriteLine("Input.String:{0}", input);
-            Console.WriteLine("output string:{0}", del(input));
-        }
-        static void Main()
-        {
-            WriteOutput("tom", new UppercaseDelegate(UppercaseFirst));
-            WriteOutput("tom", new UppercaseDelegate(UppercaseLast));
-            WriteOutput("tom", new UppercaseDelegate(UppercaseAll));
-            Console.ReadLine();
+            for (int i = 0; i < 100; i++)
+            {
+                RegisterNum student = new RegisterNum();
+                Console.WriteLine("student {0}:{1}", i + 1, student.regno);
+            }
         }
     }
 }
- OUTPUT:<br>
-    ![image](https://user-images.githubusercontent.com/98145017/152299602-a4948d0b-1039-48d6-aee9-a71d3a996cff.png)
 
 
 
